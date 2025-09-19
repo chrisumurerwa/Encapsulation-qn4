@@ -1,11 +1,38 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-   scanner sc = new scanner(System.in);
+        System.out.println("Choose a shape: 1 = Circle, 2 = Rectangle, 3 = Triangle");
+        int choice = sc.nextInt();
+        Shape shape;
 
-        System.out.println(choose a shape: shape1,shape2,shape3);
-
+        switch (choice) {
+            case 1:
+                System.out.print("Enter radius: ");
+                double r = sc.nextDouble();
+                shape = new Circle(r);
+                break;
+            case 2:
+                System.out.print("Enter length: ");
+                double l = sc.nextDouble();
+                System.out.print("Enter width: ");
+                double w = sc.nextDouble();
+                shape = new Rectangle(l, w);
+                break;
+            case 3:
+                System.out.print("Enter base: ");
+                double b = sc.nextDouble();
+                System.out.print("Enter height: ");
+                double h = sc.nextDouble();
+                shape = new Triangle(b, h);
+                break;
+            default:
+                System.out.println("Invalid choice!");
+                return;
         }
+
+        System.out.println("Area: " + shape.calculateArea());
     }
+}

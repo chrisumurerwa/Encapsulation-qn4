@@ -8,6 +8,6 @@
     }
     @Override
      double calculateArea(){
-        return length * with;
+        return length * width;
     }
 }
