@@ -5,6 +5,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Choose a shape: 1 = Circle, 2 = Rectangle, 3 = Triangle");
+
         int choice = sc.nextInt();
         Shape shape;
 
@@ -12,7 +13,7 @@ public class Main {
             case 1:
                 System.out.print("Enter radius: ");
                 double r = sc.nextDouble();
-                shape = new Circle(r);
+                shape = new Circle();
                 break;
             case 2:
                 System.out.print("Enter length: ");
